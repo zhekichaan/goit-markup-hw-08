@@ -1,0 +1,38 @@
+.socials {
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	list-style: none;
+
+	&__item:not(:last-child)	{
+		margin-right: 10px;
+	}
+
+	&__box {
+		padding: 12px ;
+		border-radius: 50%;
+		color: $clients-border-color;
+
+		transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+		color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+		
+		&:hover,
+		&:focus {
+			background-color: $hover;
+			color: $secondary-text;
+		}
+
+		&--gray {
+			background-color: $social-bg-color;
+		}
+	}
+
+	&__icon {
+		fill: currentColor;
+
+		&--white {
+			fill: $secondary-text;
+		}
+	}
+	
+}

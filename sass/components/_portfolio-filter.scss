@@ -1,0 +1,55 @@
+.portfolio-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+
+	@media screen and (max-width: 767px) {
+		flex-wrap: wrap;
+		justify-content: start;
+
+		&__item:first-child {
+			margin-bottom: 15px;
+		}
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		margin-bottom: 30px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		margin-bottom: 50px;
+	}
+
+	&__item:not(:last-child) {
+		margin-right: 8px;
+	}
+
+	&__button {
+		border-style: none;
+		border-radius: 4px;
+		padding: 6px 22px;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 1.6;
+		letter-spacing: 0.03em;
+		font-family: "Roboto", sans-serif;
+		cursor: pointer;
+		background-color: $primary-bg;
+	
+		transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+		&:hover,
+		&:focus {
+  		box-shadow: 0px 3px 1px $shadow, 
+			0px 1px 2px $shadow,
+  		0px 2px 2px $shadow;
+  		background-color: $hover;
+  		color: $secondary-text;
+		}
+	}
+}
+
+
+
