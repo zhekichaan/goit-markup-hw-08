@@ -1,0 +1,105 @@
+.hero {
+  background-color: $secondary-bg;
+  text-align: center;
+	max-width: 100%;
+	height: 400px;
+	margin: 0 auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+	background-image: linear-gradient( 
+		to right,
+		$hero-overlay-color,
+		$hero-overlay-color
+		),
+		url(../images/bg-hero-mobile.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	@media (min-divice-pixel-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution: 2dppx) {
+			background-image: linear-gradient( 
+				to right,
+				$hero-overlay-color,
+				$hero-overlay-color
+				),
+				url(../images/bg-hero-mobile2x.jpg);
+		}
+
+	@media screen and (min-width: 768px) {
+		background-image: linear-gradient( 
+		to right,
+		$hero-overlay-color,
+		$hero-overlay-color
+		),
+		url(../images/bg-hero-tablet.jpg);
+
+		@media (min-divice-pixel-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution: 2dppx) {
+			background-image: linear-gradient( 
+				to right,
+				$hero-overlay-color,
+				$hero-overlay-color
+				),
+				url(../images/bg-hero-tablet2x.jpg);
+		}
+	}
+
+	@media screen and (min-width: 1200px) {
+		background-image: linear-gradient( 
+		to right,
+		$hero-overlay-color,
+		$hero-overlay-color
+		),
+		url(../images/bg-hero.jpg);
+
+		@media (min-divice-pixel-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution: 2dppx) {
+			background-image: linear-gradient( 
+				to right,
+				$hero-overlay-color,
+				$hero-overlay-color
+				),
+				url(../images/bg-hero2x.jpg);
+		}
+	}
+
+
+	&__title {
+		margin-bottom: 30px;
+		font-size: 26px;
+		font-weight: 900;
+		letter-spacing: 0.06em;
+		line-height: 1.6;
+		text-transform: uppercase;
+		color: $secondary-text;
+	}
+
+	&__container {
+		display: block;
+	}
+	
+	@media screen and (max-width: 767px) {
+		max-width: 480px;
+	}
+
+	@media screen and (min-width: 768px) {
+		max-width: 768px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		max-width: 1600px;
+		height: 600px;
+		padding-top: 200px;
+		padding-bottom: 200px;
+
+		&__title {
+			font-size: 44px;
+			line-height: 1.4;
+		}
+	}
+
+}
